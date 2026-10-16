@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilihan Pendaftaran - PMB</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><div class="brand-icon">✦</div><span>PMB Kampus Utama</span></div>
+      <span class="autosave">● Penyimpanan sementara</span>
+    </header>
+
+<nav class="stepper">
+  <a href="Identitas.html" class="step done">
+    <span class="step-number">✓</span>
+    <span>1 Identitas</span>
+  </a>
+
+  <a href="Pendidikan.html" class="step active">
+    <span class="step-number">2</span>
+    <span>2 Pendidikan</span>
+  </a>
+
+  <a href="Pendaftaran.html" class="step">
+    <span class="step-number">3</span>
+    <span>3 Pilihan</span>
+  </a>
+
+  <a href="DataTransaksiPembayaran.html" class="step">
+    <span class="step-number">4</span>
+    <span>4 Pembayaran</span>
+  </a>
+</nav>
+
+    <main class="content">
+      <div id="message" class="notice" hidden></div>
+      <div class="step-meta"><span class="pill">Langkah 3 dari 4</span></div>
+      <h1>Pilihan Pendaftaran</h1>
+      <p class="subtitle">Tentukan jalur seleksi, program studi, dan berkas persyaratan.</p>
+
+      <form id="pendaftaranForm" data-page="pendaftaran">
+        <section class="card">
+          <h2>Jalur Seleksi</h2>
+          <div class="form-grid">
+            <label class="field full">Jalur Seleksi <span class="required">*</span>
+              <select name="jalur" required>
+                <option value="">Pilih jalur seleksi</option>
+                <option>Jalur Reguler Gelombang 1</option>
+                <option>Jalur Reguler Gelombang 2</option>
+                <option>Jalur Prestasi</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Program Studi</h2>
+          <div class="form-grid">
+            <label class="field">Pilihan 1 <span class="required">*</span>
+              <select name="prodi1" required>
+                <option value="">Pilih program studi</option>
+                <option>S1 Teknik Informatika</option>
+                <option>S1 Sistem Informasi</option>
+                <option>S1 Manajemen</option>
+              </select>
+            </label>
+            <label class="field">Pilihan 2 <span class="required">*</span>
+              <select name="prodi2" required>
+                <option value="">Pilih program studi</option>
+                <option>S1 Teknik Informatika</option>
+                <option>S1 Sistem Informasi</option>
+                <option>S1 Manajemen</option>
+              </select>
+            </label>
+            <label class="field full">Lokasi Ujian <span class="required">*</span>
+              <select name="lokasi_ujian" required>
+                <option value="">Pilih lokasi ujian</option>
+                <option>Kampus Utama - Lab Komputer 2</option>
+                <option>Kampus Utama - Lab Komputer 1</option>
+                <option>Ujian daring</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Dokumen dan Berkas Unggahan</h2>
+          <p class="hint">Semua berkas wajib diisi. Ukuran maksimal 5 MB per file.</p>
+          <div class="form-grid">
+            <label class="field">Pasfoto Resmi <span class="required">*</span>
+              <input name="pasfoto" type="file" accept=".jpg,.jpeg,.png" data-ext="jpg,jpeg,png" required>
+            </label>
+            <label class="field">Scan KTP <span class="required">*</span>
+              <input name="scan_ktp" type="file" accept=".pdf,.jpg,.jpeg,.png" data-ext="pdf,jpg,jpeg,png" required>
+            </label>
+            <label class="field">Scan Kartu Keluarga <span class="required">*</span>
+              <input name="scan_kk" type="file" accept=".pdf,.jpg,.jpeg,.png" data-ext="pdf,jpg,jpeg,png" required>
+            </label>
+            <label class="field">Scan Rapor / Ijazah <span class="required">*</span>
+              <input name="scan_rapor" type="file" accept=".pdf,.jpg,.jpeg,.png" data-ext="pdf,jpg,jpeg,png" required>
+            </label>
+            <label class="field full">Sertifikat Pendukung <span class="required">*</span>
+              <input name="sertifikat" type="file" accept=".pdf,.jpg,.jpeg,.png" data-ext="pdf,jpg,jpeg,png" required>
+            </label>
+          </div>
+        </section>
+
+        <div class="form-footer">
+          <a href="Pendidikan.html" class="btn btn-secondary">← Kembali</a>
+          <button type="submit" class="btn btn-primary">Lanjut ke Pembayaran →</button>
+        </div>
+      </form>
+    </main>
+    <p class="footer-note">Pastikan pilihan program studi berbeda.</p>
+  </main>
+</body>
+</html>

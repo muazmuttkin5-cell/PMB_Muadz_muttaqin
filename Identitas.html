@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Identitas Diri - PMB</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-icon">✦</div>
+        <span>PMB Kampus Utama</span>
+      </div>
+      <span class="autosave">● Penyimpanan sementara</span>
+    </header>
+
+   <nav class="stepper">
+  <a href="Identitas.html" class="step active">
+    <span class="step-number">1</span>
+    <span>1 Identitas</span>
+  </a>
+
+  <a href="Pendidikan.html" class="step">
+    <span class="step-number">2</span>
+    <span>2 Pendidikan</span>
+  </a>
+
+  <a href="Pendaftaran.html" class="step">
+    <span class="step-number">3</span>
+    <span>3 Pilihan</span>
+  </a>
+
+  <a href="DataTransaksiPembayaran.html" class="step">
+    <span class="step-number">4</span>
+    <span>4 Pembayaran</span>
+  </a>
+</nav>
+
+    <main class="content">
+      <div id="message" class="notice" hidden></div>
+      <div class="step-meta"><span class="pill">Langkah 1 dari 4</span></div>
+      <h1>Data Identitas Diri</h1>
+      <p class="subtitle">Lengkapi data sesuai dokumen resmi Anda.</p>
+
+      <form id="identitasForm" data-page="identitas">
+        <section class="card">
+          <div class="form-grid">
+            <label class="field">Nama Lengkap <span class="required">*</span>
+              <input name="nama" type="text" required>
+            </label>
+            <label class="field">NIK <span class="required">*</span>
+              <input name="nik" type="text" inputmode="numeric" maxlength="16" pattern="[0-9]{16}" required>
+              <span class="hint">16 digit angka</span>
+            </label>
+            <label class="field">Tempat Lahir <span class="required">*</span>
+              <input name="tempat_lahir" type="text" required>
+            </label>
+            <label class="field">Tanggal Lahir <span class="required">*</span>
+              <input name="tanggal_lahir" type="date" required>
+            </label>
+            <label class="field">Jenis Kelamin <span class="required">*</span>
+              <select name="jenis_kelamin" required>
+                <option value="">Pilih jenis kelamin</option>
+                <option>Laki-laki</option>
+                <option>Perempuan</option>
+              </select>
+            </label>
+            <label class="field">Agama <span class="required">*</span>
+              <select name="agama" required>
+                <option value="">Pilih agama</option>
+                <option>Islam</option><option>Kristen</option>
+                <option>Katolik</option><option>Hindu</option>
+                <option>Buddha</option><option>Konghucu</option>
+                <option>Lainnya</option>
+              </select>
+            </label>
+            <label class="field full">Alamat Domisili <span class="required">*</span>
+              <textarea name="alamat" required></textarea>
+            </label>
+            <label class="field">Nomor Kontak <span class="required">*</span>
+              <input name="nomor_hp" type="tel" pattern="[0-9+\-\s]{9,16}" required>
+            </label>
+            <label class="field">Email <span class="required">*</span>
+              <input name="email" type="email" required>
+            </label>
+          </div>
+        </section>
+
+        <div class="form-footer">
+          <a href="index.html" class="btn btn-secondary">Kembali</a>
+          <button type="submit" class="btn btn-primary">Lanjut ke Pendidikan →</button>
+        </div>
+      </form>
+    </main>
+    <p class="footer-note">Kolom bertanda * wajib diisi.</p>
+  </main>
+</body>
+</html>
